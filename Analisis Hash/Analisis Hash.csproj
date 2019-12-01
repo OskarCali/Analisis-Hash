@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\byteExtension.cs" />
     <Compile Include="Extensions\stringExtension.cs" />
     <Compile Include="Functions\Authentication.cs" />
     <Compile Include="Views\Home.cs">
