@@ -85,7 +85,7 @@
             // 
             this.splitContSide.Panel2.Controls.Add(this.splitContExtra);
             this.splitContSide.Panel2MinSize = 300;
-            this.splitContSide.Size = new System.Drawing.Size(1322, 459);
+            this.splitContSide.Size = new System.Drawing.Size(1322, 484);
             this.splitContSide.SplitterDistance = 898;
             this.splitContSide.SplitterWidth = 5;
             this.splitContSide.TabIndex = 6;
@@ -105,8 +105,8 @@
             // splitContInfo.Panel2
             // 
             this.splitContInfo.Panel2.Controls.Add(this.richTxtBxCripto);
-            this.splitContInfo.Size = new System.Drawing.Size(898, 459);
-            this.splitContInfo.SplitterDistance = 171;
+            this.splitContInfo.Size = new System.Drawing.Size(898, 484);
+            this.splitContInfo.SplitterDistance = 180;
             this.splitContInfo.TabIndex = 0;
             // 
             // richTxtBxSource
@@ -115,7 +115,7 @@
             this.richTxtBxSource.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBxSource.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxSource.Name = "richTxtBxSource";
-            this.richTxtBxSource.Size = new System.Drawing.Size(898, 171);
+            this.richTxtBxSource.Size = new System.Drawing.Size(898, 180);
             this.richTxtBxSource.TabIndex = 0;
             this.richTxtBxSource.Text = "";
             this.richTxtBxSource.TextChanged += new System.EventHandler(this.richTxtBx_TextChanged);
@@ -127,7 +127,7 @@
             this.richTxtBxCripto.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxCripto.Name = "richTxtBxCripto";
             this.richTxtBxCripto.ReadOnly = true;
-            this.richTxtBxCripto.Size = new System.Drawing.Size(898, 284);
+            this.richTxtBxCripto.Size = new System.Drawing.Size(898, 300);
             this.richTxtBxCripto.TabIndex = 0;
             this.richTxtBxCripto.Text = "";
             this.richTxtBxCripto.TextChanged += new System.EventHandler(this.richTxtBx_TextChanged);
@@ -146,8 +146,8 @@
             // splitContExtra.Panel2
             // 
             this.splitContExtra.Panel2.Controls.Add(this.richTxtBxBinKey);
-            this.splitContExtra.Size = new System.Drawing.Size(419, 459);
-            this.splitContExtra.SplitterDistance = 151;
+            this.splitContExtra.Size = new System.Drawing.Size(419, 484);
+            this.splitContExtra.SplitterDistance = 159;
             this.splitContExtra.TabIndex = 0;
             // 
             // richTxtBxBinText
@@ -157,7 +157,7 @@
             this.richTxtBxBinText.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxBinText.Name = "richTxtBxBinText";
             this.richTxtBxBinText.ReadOnly = true;
-            this.richTxtBxBinText.Size = new System.Drawing.Size(419, 151);
+            this.richTxtBxBinText.Size = new System.Drawing.Size(419, 159);
             this.richTxtBxBinText.TabIndex = 0;
             this.richTxtBxBinText.Text = "";
             // 
@@ -168,7 +168,7 @@
             this.richTxtBxBinKey.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxBinKey.Name = "richTxtBxBinKey";
             this.richTxtBxBinKey.ReadOnly = true;
-            this.richTxtBxBinKey.Size = new System.Drawing.Size(419, 304);
+            this.richTxtBxBinKey.Size = new System.Drawing.Size(419, 321);
             this.richTxtBxBinKey.TabIndex = 0;
             this.richTxtBxBinKey.Text = "";
             // 
@@ -305,7 +305,7 @@
             // toolStripCont.ContentPanel
             // 
             this.toolStripCont.ContentPanel.Controls.Add(this.splitContSide);
-            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1322, 459);
+            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1322, 484);
             this.toolStripCont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripCont.Location = new System.Drawing.Point(0, 160);
             this.toolStripCont.Name = "toolStripCont";
@@ -354,7 +354,8 @@
             // 
             this.openFileDialog.DefaultExt = "txt";
             this.openFileDialog.Filter = "Archivos de texto(*.txt)|*.txt";
-            this.openFileDialog.Title = "Autentificacion";
+            this.openFileDialog.InitialDirectory = "D:\\Drive UPP\\09_Cuatri\\Seguridad";
+            this.openFileDialog.Title = "Autenticacion - Archivo";
             // 
             // formHome
             // 
