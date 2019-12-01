@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Analisis_Hash.Extensions;
 using Analisis_Hash.Functions;
@@ -50,7 +44,7 @@ namespace Analisis_Hash
                     richTxtBxCripto.Text = cripto;
                     toolStripStLblText.Text = text.Length.ToString();
                     toolStripStLblCompact.Text = "caracter(es) encriptado(s)";
-                    //splitContSide.Panel2Collapsed = false;
+                    splitContSide.Panel2Collapsed = false;
                     break;
                 case 1:
                     text = richTxtBxSource.Text;
@@ -58,18 +52,27 @@ namespace Analisis_Hash
 
                     binCripto = richTxtBxCripto.Text;
 
-                    string hash = authentication.Sha256Hex(text);
-                    //hash = binCripto.HexToBin();
-                    //hash = binCripto.ToEqualize(binText, '0');
+                    var hash = authentication.Sha256Hex(text);
 
                     for (var i = 0; i < binText.Length; i++) cripto += binText[i] != binCripto[i] ? "1" : "0";
+                    if (cripto.Length > 256) cripto = cripto.Substring(0, 256);
 
-                    cripto = cripto.Substring(0, 256);
                     richTxtBxBinText.Text = hash;
                     richTxtBxBinKey.Text = cripto.BinToHex();
                     toolStripStLblText.Text = binText.Length.ToString();
                     toolStripStLblCompact.Text = "bit(s) desencriptado(s)";
-                    //splitContSide.Panel2Collapsed = false;
+                    splitContSide.Panel2Collapsed = false;
+
+                    Application.DoEvents();
+
+                    if (richTxtBxBinText.Text.Equals(richTxtBxBinKey.Text))
+                        MessageBox.Show("Resumenes SHA-256 iguales", "INFO", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information, MessageBoxDefaultButton.Button1,
+                            MessageBoxOptions.ServiceNotification);
+                    else
+                        MessageBox.Show("Resumenes SHA-256 diferentes", "ERROR", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
+                            MessageBoxOptions.ServiceNotification);
                     break;
             }
         }
@@ -148,7 +151,13 @@ namespace Analisis_Hash
 
         private void richTxtBx_TextChanged(object sender, EventArgs e)
         {
-            if (!richTxtBxSource.Text.Equals("") && !(!richTxtBxCripto.Text.Equals("") ^ modo == 1))
+            if (!richTxtBxSource.Text.Equals("") && modo == 0)
+            {
+                btnProcess.Enabled = true;
+                return;
+            }
+
+            if (!richTxtBxSource.Text.Equals("") && !(!richTxtBxCripto.Text.Equals("") ^ (modo == 1)))
             {
                 btnProcess.Enabled = true;
                 return;
@@ -159,7 +168,7 @@ namespace Analisis_Hash
 
         private void toolStripStLblAuthor_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Desarrollado por: Óskar Calí\n\nOctubre 2019", "ABOUT", MessageBoxButtons.OK,
+            MessageBox.Show("Desarrollado por: Óskar Calí\n\nNoviembre 2019", "ABOUT", MessageBoxButtons.OK,
                 MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
         }
     }

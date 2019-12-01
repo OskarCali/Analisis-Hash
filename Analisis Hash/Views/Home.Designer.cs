@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
             this.splitContSide = new System.Windows.Forms.SplitContainer();
             this.splitContInfo = new System.Windows.Forms.SplitContainer();
             this.richTxtBxSource = new System.Windows.Forms.RichTextBox();
@@ -36,7 +37,6 @@
             this.richTxtBxBinText = new System.Windows.Forms.RichTextBox();
             this.richTxtBxBinKey = new System.Windows.Forms.RichTextBox();
             this.grpBxOptions = new System.Windows.Forms.GroupBox();
-            this.btnChart = new System.Windows.Forms.Button();
             this.cmbBxMode = new System.Windows.Forms.ComboBox();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnProcess = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@
             // 
             this.splitContSide.Panel2.Controls.Add(this.splitContExtra);
             this.splitContSide.Panel2MinSize = 300;
-            this.splitContSide.Size = new System.Drawing.Size(1322, 484);
+            this.splitContSide.Size = new System.Drawing.Size(1322, 459);
             this.splitContSide.SplitterDistance = 898;
             this.splitContSide.SplitterWidth = 5;
             this.splitContSide.TabIndex = 6;
@@ -105,8 +105,8 @@
             // splitContInfo.Panel2
             // 
             this.splitContInfo.Panel2.Controls.Add(this.richTxtBxCripto);
-            this.splitContInfo.Size = new System.Drawing.Size(898, 484);
-            this.splitContInfo.SplitterDistance = 180;
+            this.splitContInfo.Size = new System.Drawing.Size(898, 459);
+            this.splitContInfo.SplitterDistance = 170;
             this.splitContInfo.TabIndex = 0;
             // 
             // richTxtBxSource
@@ -115,7 +115,7 @@
             this.richTxtBxSource.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBxSource.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxSource.Name = "richTxtBxSource";
-            this.richTxtBxSource.Size = new System.Drawing.Size(898, 180);
+            this.richTxtBxSource.Size = new System.Drawing.Size(898, 170);
             this.richTxtBxSource.TabIndex = 0;
             this.richTxtBxSource.Text = "";
             this.richTxtBxSource.TextChanged += new System.EventHandler(this.richTxtBx_TextChanged);
@@ -127,7 +127,7 @@
             this.richTxtBxCripto.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxCripto.Name = "richTxtBxCripto";
             this.richTxtBxCripto.ReadOnly = true;
-            this.richTxtBxCripto.Size = new System.Drawing.Size(898, 300);
+            this.richTxtBxCripto.Size = new System.Drawing.Size(898, 285);
             this.richTxtBxCripto.TabIndex = 0;
             this.richTxtBxCripto.Text = "";
             this.richTxtBxCripto.TextChanged += new System.EventHandler(this.richTxtBx_TextChanged);
@@ -146,8 +146,8 @@
             // splitContExtra.Panel2
             // 
             this.splitContExtra.Panel2.Controls.Add(this.richTxtBxBinKey);
-            this.splitContExtra.Size = new System.Drawing.Size(419, 484);
-            this.splitContExtra.SplitterDistance = 159;
+            this.splitContExtra.Size = new System.Drawing.Size(419, 459);
+            this.splitContExtra.SplitterDistance = 150;
             this.splitContExtra.TabIndex = 0;
             // 
             // richTxtBxBinText
@@ -157,7 +157,7 @@
             this.richTxtBxBinText.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxBinText.Name = "richTxtBxBinText";
             this.richTxtBxBinText.ReadOnly = true;
-            this.richTxtBxBinText.Size = new System.Drawing.Size(419, 159);
+            this.richTxtBxBinText.Size = new System.Drawing.Size(419, 150);
             this.richTxtBxBinText.TabIndex = 0;
             this.richTxtBxBinText.Text = "";
             // 
@@ -168,13 +168,12 @@
             this.richTxtBxBinKey.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxBinKey.Name = "richTxtBxBinKey";
             this.richTxtBxBinKey.ReadOnly = true;
-            this.richTxtBxBinKey.Size = new System.Drawing.Size(419, 321);
+            this.richTxtBxBinKey.Size = new System.Drawing.Size(419, 305);
             this.richTxtBxBinKey.TabIndex = 0;
             this.richTxtBxBinKey.Text = "";
             // 
             // grpBxOptions
             // 
-            this.grpBxOptions.Controls.Add(this.btnChart);
             this.grpBxOptions.Controls.Add(this.cmbBxMode);
             this.grpBxOptions.Controls.Add(this.btnShow);
             this.grpBxOptions.Controls.Add(this.btnProcess);
@@ -189,18 +188,6 @@
             this.grpBxOptions.TabIndex = 8;
             this.grpBxOptions.TabStop = false;
             this.grpBxOptions.Text = "Hash";
-            // 
-            // btnChart
-            // 
-            this.btnChart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChart.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChart.Location = new System.Drawing.Point(851, 29);
-            this.btnChart.Name = "btnChart";
-            this.btnChart.Size = new System.Drawing.Size(115, 40);
-            this.btnChart.TabIndex = 7;
-            this.btnChart.Text = "GRAFICA";
-            this.btnChart.UseVisualStyleBackColor = true;
-            this.btnChart.Visible = false;
             // 
             // cmbBxMode
             // 
@@ -305,7 +292,7 @@
             // toolStripCont.ContentPanel
             // 
             this.toolStripCont.ContentPanel.Controls.Add(this.splitContSide);
-            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1322, 484);
+            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1322, 459);
             this.toolStripCont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripCont.Location = new System.Drawing.Point(0, 160);
             this.toolStripCont.Name = "toolStripCont";
@@ -365,6 +352,7 @@
             this.Controls.Add(this.toolStripCont);
             this.Controls.Add(this.grpBxOptions);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1340, 720);
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -405,7 +393,6 @@
         private System.Windows.Forms.RichTextBox richTxtBxBinText;
         private System.Windows.Forms.RichTextBox richTxtBxBinKey;
         private System.Windows.Forms.GroupBox grpBxOptions;
-        private System.Windows.Forms.Button btnChart;
         private System.Windows.Forms.ComboBox cmbBxMode;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnProcess;
